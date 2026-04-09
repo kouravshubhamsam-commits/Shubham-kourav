@@ -36,11 +36,8 @@
     --glow: rgba(22,163,74,0.1);
     --shadow: 0 8px 32px rgba(0,0,0,0.08);
   }
-
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
   html { scroll-behavior: smooth; }
-
   body {
     font-family: 'Syne', sans-serif;
     background: var(--bg);
@@ -49,15 +46,13 @@
     overflow-x: hidden;
     transition: background 0.4s, color 0.4s;
   }
-
-  /* CANVAS BACKGROUND */
+  /* CANVAS BACKGROUND - Enhanced interactivity */
   #bg-canvas {
     position: fixed; top: 0; left: 0; width: 100%; height: 100%;
     z-index: 0; pointer-events: none; opacity: 0.55;
     transition: opacity 0.4s;
   }
   [data-theme="light"] #bg-canvas { opacity: 0.2; }
-
   /* NAV */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
@@ -84,8 +79,8 @@
     font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase;
     transition: color 0.2s;
   }
-  .nav-links a:hover { color: var(--accent); }
-
+  .nav-links a:hover,
+  .nav-links a.active { color: var(--accent); }
   .theme-btn {
     background: var(--bg3); border: 1px solid var(--border);
     color: var(--text); width: 40px; height: 40px;
@@ -94,7 +89,6 @@
     transition: all 0.2s; flex-shrink: 0;
   }
   .theme-btn:hover { border-color: var(--accent); color: var(--accent); }
-
   .hamburger {
     display: none; flex-direction: column; gap: 5px;
     cursor: pointer; background: none; border: none; padding: 4px;
@@ -117,11 +111,9 @@
     border-bottom: 1px solid var(--border);
   }
   .mobile-menu a:hover { color: var(--accent); }
-
   /* SECTIONS */
   section { position: relative; z-index: 1; }
   .container { max-width: 1100px; margin: 0 auto; padding: 0 clamp(1.5rem, 5vw, 4rem); }
-
   /* ===== HERO ===== */
   #hero {
     min-height: 100vh;
@@ -177,7 +169,6 @@
     border: 1px solid var(--border);
   }
   .btn-outline:hover { border-color: var(--accent2); color: var(--accent2); transform: translateY(-2px); }
-
   /* Terminal card */
   .hero-terminal {
     background: var(--bg2); border: 1px solid var(--border);
@@ -201,7 +192,6 @@
     vertical-align: middle; margin-left: 2px;
   }
   @keyframes blink { 50% { opacity: 0; } }
-
   /* Stats bar */
   .stats-bar {
     display: flex; gap: 2rem; flex-wrap: wrap;
@@ -218,7 +208,6 @@
     font-size: 0.75rem; color: var(--text2);
     letter-spacing: 0.08em; text-transform: uppercase; margin-top: 4px;
   }
-
   /* ===== SECTION HEADERS ===== */
   .section-header {
     margin-bottom: 3.5rem;
@@ -238,7 +227,6 @@
     line-height: 1.1;
   }
   .section-title span { color: var(--accent); }
-
   /* ===== ABOUT ===== */
   #about { padding: 7rem 0; }
   .about-grid {
@@ -273,7 +261,6 @@
     letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 2px;
   }
   .info-val { font-weight: 700; font-size: 0.9rem; }
-
   /* ===== SKILLS ===== */
   #skills { padding: 7rem 0; background: var(--bg2); }
   .skills-grid {
@@ -302,7 +289,6 @@
   .skill-tag:hover {
     background: var(--accent); color: #000; border-color: var(--accent);
   }
-
   /* Skill bars */
   .skill-bars { display: flex; flex-direction: column; gap: 0.75rem; margin-top: 0.5rem; }
   .skill-bar-item {}
@@ -323,7 +309,6 @@
     border-radius: 2px; width: 0%;
     transition: width 1.2s cubic-bezier(0.16,1,0.3,1);
   }
-
   /* ===== EXPERIENCE ===== */
   #experience { padding: 7rem 0; }
   .timeline { position: relative; }
@@ -372,7 +357,6 @@
     color: var(--accent); font-size: 0.7rem; top: 3px;
   }
   .timeline-list li strong { color: var(--accent2); font-weight: 600; }
-
   /* ===== PROJECTS ===== */
   #projects { padding: 7rem 0; background: var(--bg2); }
   .projects-grid {
@@ -411,7 +395,6 @@
     border: 1px solid rgba(57,211,83,0.3);
     font-family: 'JetBrains Mono', monospace;
   }
-
   /* ===== CERTIFICATIONS ===== */
   #certifications { padding: 7rem 0; }
   .certs-grid {
@@ -438,7 +421,6 @@
   }
   .cert-level.advanced { background: rgba(247,129,102,0.15); color: var(--accent3); border: 1px solid rgba(247,129,102,0.3); }
   .cert-level.professional { background: rgba(88,166,255,0.1); color: var(--accent2); border: 1px solid rgba(88,166,255,0.3); }
-
   /* ===== CONTACT ===== */
   #contact { padding: 7rem 0; background: var(--bg2); }
   .contact-inner {
@@ -464,7 +446,6 @@
   .contact-link-icon { font-size: 1.2rem; flex-shrink: 0; }
   .contact-link-label { font-size: 0.65rem; color: var(--text2); text-transform: uppercase; letter-spacing: 0.1em; display: block; margin-bottom: 2px; }
   .contact-link-val { font-weight: 700; }
-
   /* Availability pill */
   .avail-badge {
     display: inline-flex; align-items: center; gap: 0.5rem;
@@ -481,7 +462,6 @@
     0%, 100% { box-shadow: 0 0 0 0 rgba(57,211,83,0.4); }
     50% { box-shadow: 0 0 0 6px rgba(57,211,83,0); }
   }
-
   /* FOOTER */
   footer {
     padding: 2rem; text-align: center;
@@ -491,11 +471,9 @@
     position: relative; z-index: 1;
   }
   footer span { color: var(--accent); }
-
   /* SCROLL REVEAL */
   .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s, transform 0.7s; }
   .reveal.visible { opacity: 1; transform: translateY(0); }
-
   /* RESPONSIVE */
   @media(max-width: 900px) {
     .hero-inner { grid-template-columns: 1fr; }
@@ -508,7 +486,6 @@
     .stats-bar { gap: 1.5rem; }
     .stat-num { font-size: 1.8rem; }
   }
-
   /* Scrollbar */
   ::-webkit-scrollbar { width: 5px; }
   ::-webkit-scrollbar-track { background: var(--bg); }
@@ -517,10 +494,8 @@
 </style>
 </head>
 <body>
-
 <!-- CANVAS BACKGROUND -->
 <canvas id="bg-canvas"></canvas>
-
 <!-- NAV -->
 <nav>
   <div class="nav-logo">SK<span>.</span></div>
@@ -539,7 +514,6 @@
     </button>
   </div>
 </nav>
-
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
   <a href="#about" onclick="closeMobile()">About</a>
@@ -549,7 +523,6 @@
   <a href="#certifications" onclick="closeMobile()">Certifications</a>
   <a href="#contact" onclick="closeMobile()">Contact</a>
 </div>
-
 <!-- HERO -->
 <section id="hero">
   <div class="container">
@@ -569,13 +542,12 @@
           5 years crafting end-to-end QA solutions for global platforms across 10+ countries.
         </p>
         <div class="hero-btns">
-       <a href="ShubhamKourav_SDET_5Years.pdf" download class="btn btn-primary">
-  ⬇ Download Resume
-</a>
-
-<a href="ShubhamKourav_SDET_5Years.pdf" target="_blank" class="btn btn-outline">
-  View Resume
-</a>
+          <a href="ShubhamKourav_SDET_5Years.pdf" download class="btn btn-primary">
+            ⬇ Download Resume (PDF)
+          </a>
+          <a href="ShubhamKourav_SDET_5Years.pdf" target="_blank" class="btn btn-outline">
+            👁️ View Resume
+          </a>
           <a href="#projects" class="btn btn-outline">View Projects</a>
           <a href="https://linkedin.com/in/qashubham" target="_blank" rel="noopener" class="btn btn-outline">LinkedIn</a>
         </div>
@@ -602,7 +574,6 @@
           </div>
         </div>
       </div>
-
       <div class="hero-terminal">
         <div class="term-header">
           <div class="term-dot" style="background:#ff5f57;"></div>
@@ -628,7 +599,6 @@
     </div>
   </div>
 </section>
-
 <!-- ABOUT -->
 <section id="about">
   <div class="container">
@@ -639,7 +609,7 @@
     <div class="about-grid">
       <div class="about-text reveal">
         <p>
-          I'm a <strong>Test Automation Engineer with 5 years of expertise</strong> embedded with 
+          I'm a <strong>Test Automation Engineer with 5 years of expertise</strong> embedded with
           <strong>VIOOH</strong> — a global Out-of-Home advertising platform running programmatic digital billboard campaigns across <strong>10 countries</strong>.
         </p>
         <p>
@@ -710,7 +680,6 @@
     </div>
   </div>
 </section>
-
 <!-- SKILLS -->
 <section id="skills">
   <div class="container">
@@ -718,7 +687,6 @@
       <div class="section-tag">Skills</div>
       <h2 class="section-title">Core <span>Stack</span></h2>
     </div>
-
     <div class="skills-grid" style="margin-bottom:2.5rem;">
       <div class="skill-group reveal">
         <div class="skill-group-title"><span class="icon">🤖</span> Test Automation</div>
@@ -788,7 +756,6 @@
         </div>
       </div>
     </div>
-
     <!-- Proficiency Bars -->
     <div style="background:var(--card);border:1px solid var(--border);border-radius:14px;padding:2rem;" class="reveal">
       <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent2);margin-bottom:1.5rem;">Proficiency Levels</div>
@@ -821,7 +788,6 @@
     </div>
   </div>
 </section>
-
 <!-- EXPERIENCE -->
 <section id="experience">
   <div class="container">
@@ -847,7 +813,6 @@
           <li>Leveraged <strong>Generative AI</strong> to accelerate automation workflows including boilerplate script generation and synthetic test data creation.</li>
         </ul>
       </div>
-
       <div class="timeline-item reveal">
         <div class="timeline-dot"></div>
         <div class="timeline-date">Mar 2022 — Dec 2023 · 1 yr 10 mos</div>
@@ -863,7 +828,6 @@
           <li>Tracked and resolved <strong>200+ JIRA defects</strong> across 5+ releases with zero critical escaped defects in the last 3 consecutive quarterly releases.</li>
         </ul>
       </div>
-
       <div class="timeline-item reveal">
         <div class="timeline-dot"></div>
         <div class="timeline-date">Mar 2021 — Mar 2022 · 1 yr</div>
@@ -878,7 +842,6 @@
     </div>
   </div>
 </section>
-
 <!-- PROJECTS -->
 <section id="projects">
   <div class="container">
@@ -887,7 +850,6 @@
       <h2 class="section-title">Key <span>Projects</span></h2>
     </div>
     <div class="projects-grid">
-
       <div class="project-card reveal">
         <div class="project-icon">🎯</div>
         <div class="project-title">Campaign Automation Test Suite</div>
@@ -907,7 +869,6 @@
           <span class="outcome-pill">40% Faster Releases</span>
         </div>
       </div>
-
       <div class="project-card reveal">
         <div class="project-icon">🤖</div>
         <div class="project-title">RPA Finance Operations Bot Suite</div>
@@ -926,7 +887,6 @@
           <span class="outcome-pill">60% Less Manual Work</span>
         </div>
       </div>
-
       <div class="project-card reveal">
         <div class="project-icon">🔌</div>
         <div class="project-title">API Automation Framework</div>
@@ -945,7 +905,6 @@
           <span class="outcome-pill">5 Quarterly Releases</span>
         </div>
       </div>
-
       <div class="project-card reveal">
         <div class="project-icon">📊</div>
         <div class="project-title">Real-Time QA Dashboard</div>
@@ -963,11 +922,9 @@
           <span class="outcome-pill">Real-Time Monitoring</span>
         </div>
       </div>
-
     </div>
   </div>
 </section>
-
 <!-- CERTIFICATIONS -->
 <section id="certifications">
   <div class="container">
@@ -1015,7 +972,6 @@
     </div>
   </div>
 </section>
-
 <!-- CONTACT -->
 <section id="contact">
   <div class="container">
@@ -1029,8 +985,7 @@
         <p>
           I'm actively exploring Senior SDET and Test Automation Lead roles — open to PAN India locations and remote positions. Notice period ends June 10, 2026. Let's talk.
         </p>
-       
-  <a href="mailto:sk8982976179@gmail.com?subject=Opportunity for SDET Role" class="btn btn-primary" style="align-self:flex-start;">
+        <a href="mailto:sk8982976179@gmail.com?subject=Opportunity for SDET Role" class="btn btn-primary" style="align-self:flex-start;">
           ✉ Send Email
         </a>
       </div>
@@ -1043,12 +998,12 @@
           </span>
         </a>
         <a href="ShubhamKourav_SDET_5Years.pdf" download class="contact-link">
-  <span class="contact-link-icon">📄</span>
-  <span>
-    <span class="contact-link-label">Resume</span>
-    <span class="contact-link-val">Download PDF</span>
-  </span>
-</a>
+          <span class="contact-link-icon">📄</span>
+          <span>
+            <span class="contact-link-label">Resume</span>
+            <span class="contact-link-val">Download PDF</span>
+          </span>
+        </a>
         <a href="tel:+918982976179" class="contact-link">
           <span class="contact-link-icon">📱</span>
           <span>
@@ -1057,12 +1012,12 @@
           </span>
         </a>
         <a href="https://wa.me/918982976179" target="_blank" class="contact-link">
-  <span class="contact-link-icon">💬</span>
-  <span>
-    <span class="contact-link-label">WhatsApp</span>
-    <span class="contact-link-val">Chat Instantly</span>
-  </span>
-</a>
+          <span class="contact-link-icon">💬</span>
+          <span>
+            <span class="contact-link-label">WhatsApp</span>
+            <span class="contact-link-val">Chat Instantly</span>
+          </span>
+        </a>
         <a href="https://linkedin.com/in/qashubham" target="_blank" rel="noopener" class="contact-link">
           <span class="contact-link-icon">💼</span>
           <span>
@@ -1081,17 +1036,16 @@
     </div>
   </div>
 </section>
-
 <footer>
-  <p>Built by <span>Shubham Kourav</span> · Senior SDET · 2025 · <span>sk8982976179@gmail.com</span></p>
+  <p>Built by <span>Shubham Kourav</span> · Senior SDET · 2026 · Last updated April 2026 · <span>sk8982976179@gmail.com</span></p>
 </footer>
 
 <script>
-// ===== CANVAS BACKGROUND =====
+// ===== CANVAS BACKGROUND - Now much more interactive & reactive =====
 const canvas = document.getElementById('bg-canvas');
 const ctx = canvas.getContext('2d');
 let W, H, particles = [], mouse = { x: null, y: null };
-const PARTICLE_COUNT = 90;
+const PARTICLE_COUNT = 135; // increased for richer effect
 
 function resize() {
   W = canvas.width = window.innerWidth;
@@ -1105,14 +1059,33 @@ class Particle {
   reset() {
     this.x = Math.random() * W;
     this.y = Math.random() * H;
-    this.vx = (Math.random() - 0.5) * 0.35;
-    this.vy = (Math.random() - 0.5) * 0.35;
-    this.r = Math.random() * 2 + 1;
-    this.alpha = Math.random() * 0.6 + 0.2;
+    this.vx = (Math.random() - 0.5) * 0.6;
+    this.vy = (Math.random() - 0.5) * 0.6;
+    this.r = Math.random() * 2.2 + 1;
+    this.alpha = Math.random() * 0.65 + 0.25;
   }
   update() {
+    // === MOUSE REACTION - particles are now attracted to cursor (very reactive) ===
+    if (mouse.x !== null && mouse.y !== null) {
+      const dx = mouse.x - this.x;
+      const dy = mouse.y - this.y;
+      const dist = Math.hypot(dx, dy);
+
+      if (dist < 280 && dist > 8) {
+        const force = (280 - dist) / 280 * 1.1; // stronger pull when closer
+        this.vx += (dx / dist) * force * 0.85;
+        this.vy += (dy / dist) * force * 0.85;
+      }
+    }
+
     this.x += this.vx;
     this.y += this.vy;
+
+    // velocity damping (keeps movement smooth & natural)
+    this.vx *= 0.975;
+    this.vy *= 0.975;
+
+    // bounce off edges
     if (this.x < 0 || this.x > W) this.vx *= -1;
     if (this.y < 0 || this.y > H) this.vy *= -1;
   }
@@ -1126,37 +1099,68 @@ class Particle {
   }
 }
 
+// create initial particles
 for (let i = 0; i < PARTICLE_COUNT; i++) particles.push(new Particle());
+
+// === CLICK BURST - extra interactivity ===
+let lastClick = 0;
+document.addEventListener('click', (e) => {
+  if (Date.now() - lastClick < 180) return; // prevent spam
+  lastClick = Date.now();
+
+  const rect = canvas.getBoundingClientRect();
+  const mx = e.clientX - rect.left;
+  const my = e.clientY - rect.top;
+
+  // spawn 22 new particles exploding outward from click
+  for (let i = 0; i < 22; i++) {
+    const p = new Particle();
+    p.x = mx;
+    p.y = my;
+    const angle = Math.random() * Math.PI * 2;
+    const speed = 1.8 + Math.random() * 2.4;
+    p.vx = Math.cos(angle) * speed;
+    p.vy = Math.sin(angle) * speed;
+    p.r = 1.8 + Math.random() * 1.6;
+    particles.push(p);
+
+    // keep total particles reasonable
+    if (particles.length > 260) particles.shift();
+  }
+});
 
 function drawLines() {
   const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
   const color = isDark ? '57,211,83' : '22,163,74';
-  const MAX_DIST = 130;
+  const MAX_DIST = 165;
+
   for (let i = 0; i < particles.length; i++) {
     for (let j = i + 1; j < particles.length; j++) {
       const dx = particles[i].x - particles[j].x;
       const dy = particles[i].y - particles[j].y;
-      const dist = Math.sqrt(dx * dx + dy * dy);
+      const dist = Math.hypot(dx, dy);
+
       if (dist < MAX_DIST) {
         ctx.beginPath();
         ctx.moveTo(particles[i].x, particles[i].y);
         ctx.lineTo(particles[j].x, particles[j].y);
-        ctx.strokeStyle = `rgba(${color},${0.12 * (1 - dist / MAX_DIST)})`;
-        ctx.lineWidth = 0.7;
+        ctx.strokeStyle = `rgba(${color},${0.14 * (1 - dist / MAX_DIST)})`;
+        ctx.lineWidth = 0.75;
         ctx.stroke();
       }
     }
-    // mouse connection
+
+    // mouse connection line (enhanced)
     if (mouse.x !== null) {
       const dx = particles[i].x - mouse.x;
       const dy = particles[i].y - mouse.y;
-      const dist = Math.sqrt(dx * dx + dy * dy);
-      if (dist < 180) {
+      const dist = Math.hypot(dx, dy);
+      if (dist < 200) {
         ctx.beginPath();
         ctx.moveTo(particles[i].x, particles[i].y);
         ctx.lineTo(mouse.x, mouse.y);
-        ctx.strokeStyle = `rgba(${color},${0.25 * (1 - dist / 180)})`;
-        ctx.lineWidth = 1;
+        ctx.strokeStyle = `rgba(${color},${0.32 * (1 - dist / 200)})`;
+        ctx.lineWidth = 1.1;
         ctx.stroke();
       }
     }
@@ -1171,8 +1175,14 @@ function animate() {
 }
 animate();
 
-window.addEventListener('mousemove', e => { mouse.x = e.clientX; mouse.y = e.clientY; });
-window.addEventListener('mouseleave', () => { mouse.x = null; mouse.y = null; });
+window.addEventListener('mousemove', e => { 
+  mouse.x = e.clientX; 
+  mouse.y = e.clientY; 
+});
+window.addEventListener('mouseleave', () => { 
+  mouse.x = null; 
+  mouse.y = null; 
+});
 
 // ===== THEME TOGGLE =====
 const themeBtn = document.getElementById('themeToggle');
@@ -1209,17 +1219,17 @@ const barObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.3 });
 document.querySelectorAll('.skill-bars').forEach(el => barObserver.observe(el));
 
-// ===== ACTIVE NAV on scroll =====
+// ===== ACTIVE NAV (now using CSS class - cleaner) =====
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav-links a');
+
 window.addEventListener('scroll', () => {
   let cur = '';
   sections.forEach(s => {
     if (window.scrollY >= s.offsetTop - 80) cur = s.id;
   });
   navLinks.forEach(a => {
-    a.style.color = a.getAttribute('href') === '#' + cur
-      ? 'var(--accent)' : '';
+    a.classList.toggle('active', a.getAttribute('href') === '#' + cur);
   });
 });
 </script>
